@@ -1,0 +1,38 @@
+
+
+name: Deploy to Railway #name of a Workflow (will be visible in Git Hub actions)
+#adding a trigger (when the Workflow will start doing smth..)
+# trigger - when we have a push to "main"
+on:
+  push:
+    branches:
+      - main
+
+# adding actions,
+# what actions Git Hub will do after the trigger
+jobs:
+  deploy:
+    runs-on: ubuntu-latest #git gub actions will create a temp Linux server, it will do the next actions
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Railway CLI
+        run: npm install -g @railway/CLI
+
+      - name: Deploy to Railway
+        run: Railway up
+        env: 
+          RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
+
+
+
+
+
+           
+
+
+
+
+
+ 
+
