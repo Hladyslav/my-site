@@ -14,8 +14,8 @@ jobs:
   deploy: # це просто identifier (ID) job.
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout code #склонуй репозиторій на VM Гіт Хаба
+        uses: actions/checkout@v3 
 
 
 #jobs:
