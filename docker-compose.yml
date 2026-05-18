@@ -1,0 +1,9 @@
+
+
+services: #means that after it i will write the list of 'services' to run
+  web_site: #just the name of a servise for Docker Compose.. it is hard to explain for now
+    build: . #make an image of Docker file in current directory
+    ports:
+      - "8080:80" #use these ports
+    container_name: my-site-container #i'm naming the container (is visible in Docker Desktop)
+

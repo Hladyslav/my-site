@@ -18,6 +18,9 @@ jobs:
         uses: actions/checkout@v3 
 
 
+    #наступний код не треба, бо я передумав юзати токен,
+    # та й тут не треба розгортати railway так як він сам задеплоїться,
+    #бо є веб-хук від railway коли я роблю пуш в гітхаб
 #jobs:
   #deploy:
    # runs-on: ubuntu-latest #git gub actions will create a temp Linux server, it will do the next actions
